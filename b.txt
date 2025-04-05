@@ -1,0 +1,66 @@
+<!-- Updated signin1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenHeal - Sign Up & Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles111.css">
+    <script src="signin.js"></script>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="rengoku-vs-akaza-4k-714-ytshorts.savetube.me.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    
+    <div class="ring">
+        <div class="form-container" id="login-form">
+            <div class="logo">
+                <h1><i class="fas fa-stethoscope"></i> <span style="color: orange;">Zen</span><span style="color: green;">Heal</span></h1>
+            </div>
+            <div class="form-header">
+                <h2>Welcome Back!</h2>
+            </div>
+            <div class="inputBx">
+                <input type="text" id="login-username" placeholder="Username or Email" required>
+            </div>
+            
+            <div class="inputBx">
+                <button onclick="login()">Log In</button>
+            </div>
+            <div class="switch-form">
+                <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
+            </div>
+            <div class="inputBx social-login">
+                <center><p>Or log in with</p></center>
+                <button class="google-btn" onclick="loginWithGoogle()">
+                    <i class="fab fa-google"></i> Google
+                </button>
+                <button class="facebook-btn" onclick="loginWithFacebook()">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </button>
+                <button class="linkedin-btn" onclick="loginWithLinkedIn()">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- Updated styles111.css -->
+<style>
+.google-btn {
+    background: #DB4437 !important; /* Google Red */
+}
+
+.facebook-btn {
+    background: #4267B2 !important; /* Facebook Blue */
+}
+
+.linkedin-btn {
+    background: #0077B5 !important; /* LinkedIn Blue */
+}
+</style>

@@ -1,0 +1,35 @@
+:root {
+    --primary-color: #45cf45;
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+    --border-color: #05ff2b;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background: var(--secondary-color);
+    padding: 2rem;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: darken(var(--primary-color), 10%);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

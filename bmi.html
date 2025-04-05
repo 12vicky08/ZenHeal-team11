@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenHeal - Your Path to Wellness</title>
+    <link rel="icon" href="download.png" type="image/x-icon" style="border-radius: 50%;">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="scriptv.js"></script>
+    <link rel="stylesheet" href="styles11.css">
+    <style>
+        .login-btn { 
+    display: inline-block;
+    background-color: #e8efea;
+    
+    
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.login-btn:hover {
+    background-color: #edf4ed; 
+    transform: scale(1.05);
+}
+
+.login-btn:active {
+    background-color: #d8e0da;
+}
+
+
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.unit-selection {
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+#result {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1><span class="orange">Zen</span> <i class="fas fa-heartbeat"></i> <span
+                        class="green">Heal</span></h1>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+            <div class="nav-menu">
+                <a href="index1.html" class="nav-item">Home</a>
+                
+                
+                 <div class="nav-item dropdown">
+                    <button class="dropbtn">Conditions</button>
+                    <div class="dropdown-content">
+                        <a href="test.html">Alziemer's</a>
+                        <a href="bmi.html">BMI Calculator</a>
+                        <a href="risk.html">Risk Assessment</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <button class="dropbtn">Drugs & Supplements</button>
+                    <div class="dropdown-content">
+                        <a href="drugs.html">Drugs</a>
+                        <a href="drugs.html">Supplements</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <button class="dropbtn">Well-Being</button>
+                    <div class="dropdown-content">
+                        <a href="wellbeing.html">Diet</a>
+                        <a href="wellbeing.html">Exercise</a>
+                        <a href="wellbeing.html">Mental Health</a>
+                    </div>
+                </div>
+                <a href="symptom.html" class="nav-item">Symptom Checker</a>
+                <a href="doctor.html" class="nav-item">Find a Doctor</a>
+            </div>
+            <div class="nav-right">
+                
+                <button class="login-btn"><a href="loading1.html" class="page-transition">Login</a></button>
+                <button class="dark-mode-toggle">🌙</button>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <div class="unit-selection">
+            <label for="units">Select Units:</label>
+            <select id="units">
+                <option value="metric">Metric (kg, m)</option>
+                <option value="imperial">Imperial (lbs, ft/in)</option>
+            </select>
+        </div>
+        <div id="metric-inputs" class="input-group">
+            <label for="weight-kg">Weight (kg):</label>
+            <input type="number" id="weight-kg" placeholder="Enter weight in kg">
+            <label for="height-m">Height (m):</label>
+            <input type="number" id="height-m" placeholder="Enter height in meters">
+        </div>
+        <div id="imperial-inputs" class="input-group" style="display: none;">
+            <label for="weight-lbs">Weight (lbs):</label>
+            <input type="number" id="weight-lbs" placeholder="Enter weight in pounds">
+            <label for="height-ft">Height (ft):</label>
+            <input type="number" id="height-ft" placeholder="Feet">
+            <label for="height-in">Height (in):</label>
+            <input type="number" id="height-in" placeholder="Inches">
+        </div>
+        <button id="calculate-btn">Calculate BMI</button>
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const unitsSelect = document.getElementById('units');
+    const metricInputs = document.getElementById('metric-inputs');
+    const imperialInputs = document.getElementById('imperial-inputs');
+    const calculateBtn = document.getElementById('calculate-btn');
+    const resultDiv = document.getElementById('result');
+
+    // Toggle input fields based on unit selection
+    unitsSelect.addEventListener('change', () => {
+        if (unitsSelect.value === 'metric') {
+            metricInputs.style.display = 'block';
+            imperialInputs.style.display = 'none';
+        } else {
+            metricInputs.style.display = 'none';
+            imperialInputs.style.display = 'block';
+        }
+    });
+
+    // Calculate BMI when the button is clicked
+    calculateBtn.addEventListener('click', () => {
+        let weight, height;
+
+        if (unitsSelect.value === 'metric') {
+            // Metric units
+            weight = parseFloat(document.getElementById('weight-kg').value);
+            height = parseFloat(document.getElementById('height-m').value);
+        } else {
+            // Imperial units
+            const weightLbs = parseFloat(document.getElementById('weight-lbs').value);
+            const heightFt = parseFloat(document.getElementById('height-ft').value);
+            const heightIn = parseFloat(document.getElementById('height-in').value);
+            const totalInches = (heightFt * 12) + heightIn;
+            height = totalInches * 0.0254; // Convert to meters
+            weight = weightLbs * 0.453592; // Convert to kg
+        }
+
+        // Input validation
+        if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+            resultDiv.textContent = 'Please enter valid positive numbers for weight and height.';
+            return;
+        }
+
+        // Calculate BMI
+        const bmi = weight / (height * height);
+
+        // Determine BMI category
+        let category;
+        if (bmi < 18.5) {
+            category = 'Underweight';
+        } else if (bmi < 25) {
+            category = 'Normal weight';
+        } else if (bmi < 30) {
+            category = 'Overweight';
+        } else {
+            category = 'Obese';
+        }
+
+        // Display result
+        resultDiv.textContent = `Your BMI is ${bmi.toFixed(1)} (${category})`;
+    });
+});
+</script>
+</html>
