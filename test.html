@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenHeal - Your Path to Wellness</title>
+    <link rel="icon" href="download.png" type="image/x-icon" style="border-radius: 50%;">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="scriptv.js"></script>
+    <link rel="stylesheet" href="styles11.css">
+    <style>
+        .login-btn, .profile-icon {
+            display: inline-block;
+            background-color: #e8efea;
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-decoration: none;
+            color: black;
+        }
+
+        .login-btn:hover, .profile-icon:hover {
+            background-color: #edf4ed;
+            transform: scale(1.05);
+        }
+
+        .login-btn:active, .profile-icon:active {
+            background-color: #d8e0da;
+        }
+
+        .profile-icon {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body onload="checkLoginStatus()">
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1><span class="orange">Zen</span> <i class="fas fa-heartbeat"></i> <span
+                        class="green">Heal</span></h1>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+            <div class="nav-menu">
+                <a href="#" class="nav-item">Home</a>
+                <div class="nav-item dropdown">
+                    <button class="dropbtn">Conditions</button>
+                    <div class="dropdown-content">
+                        <a href="alziemers.html">Alzheimer's</a>
+                        <a href="bmi.html">BMI Calculator</a>
+                        <a href="risk.html">Risk Assessment</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <button class="dropbtn">Drugs & Supplements</button>
+                    <div class="dropdown-content">
+                        <a href="drugs.html">Drugs</a>
+                        <a href="drugs.html">Supplements</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <button class="dropbtn">Well-Being</button>
+                    <div class="dropdown-content">
+                        <a href="wellbeing.html">Diet</a>
+                        <a href="wellbeing.html">Exercise</a>
+                        <a href="wellbeing.html">Mental Health</a>
+                    </div>
+                </div>
+                <a href="symptom.html" class="nav-item">Symptom Checker</a>
+                <a href="doctor.html" class="nav-item">Find a Doctor</a>
+            </div>
+            <div class="nav-right">
+                <button id="loginButton" class="login-btn" onclick="login()">Login</button>
+                <button id="profileIcon" class="profile-icon" onclick="logout()"><i class="fas fa-user-circle"></i></button>
+                <button class="dark-mode-toggle">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        function checkLoginStatus() {
+            if (localStorage.getItem("loggedIn")) {
+                document.getElementById("loginButton").style.display = "none";
+                document.getElementById("profileIcon").style.display = "inline-block";
+            }
+        }
+
+        function login() {
+            localStorage.setItem("loggedIn", true);
+            checkLoginStatus();
+        }
+
+        function logout() {
+            localStorage.removeItem("loggedIn");
+            document.getElementById("loginButton").style.display = "inline-block";
+            document.getElementById("profileIcon").style.display = "none";
+        }
+    </script>
+</body>
+</html>

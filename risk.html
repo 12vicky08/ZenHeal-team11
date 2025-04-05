@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenHeal - Your Path to Wellness</title>
+    <link rel="icon" href="download.png" type="image/x-icon" style="border-radius: 50%;">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="scriptv.js"></script>
+    <link rel="stylesheet" href="styles11.css">
+    <style>
+        .login-btn { 
+    display: inline-block;
+    background-color: #e8efea;
+    
+    
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.login-btn:hover {
+    background-color: #edf4ed; 
+    transform: scale(1.05);
+}
+
+.login-btn:active {
+    background-color: #d8e0da;
+}
+
+
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #e74c3c; /* Red for risk theme */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: #c0392b;
+}
+
+#result {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+    </style>
+</head>
+<body>
+     <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1><span class="orange">Zen</span> <i class="fas fa-heartbeat"></i> <span
+                        class="green">Heal</span></h1>
+            </div>
+            <button class="mobile-menu-btn">☰</button>
+            <div class="nav-menu">
+                <a href="index1.html" class="nav-item">Home</a>
+                
+                
+                 <div class="nav-item dropdown">
+                    <button class="dropbtn">Conditions</button>
+                    <div class="dropdown-content">
+                        <a href="test.html">Alziemer's</a>
+                        <a href="bmi.html">BMI Calculator</a>
+                        <a href="risk.html">Risk Assessment</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <button class="dropbtn">Drugs & Supplements</button>
+                    <div class="dropdown-content">
+                        <a href="drugs.html">Drugs</a>
+                        <a href="drugs.html">Supplements</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <button class="dropbtn">Well-Being</button>
+                    <div class="dropdown-content">
+                        <a href="wellbeing.html">Diet</a>
+                        <a href="wellbeing.html">Exercise</a>
+                        <a href="wellbeing.html">Mental Health</a>
+                    </div>
+                </div>
+                <a href="symptom.html" class="nav-item">Symptom Checker</a>
+                <a href="doctor.html" class="nav-item">Find a Doctor</a>
+            </div>
+            <div class="nav-right">
+                
+                <button class="login-btn"><a href="loading1.html" class="page-transition">Login</a></button>
+                <button class="dark-mode-toggle">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Health Risk Assessment</h1>
+        <p>Enter your details below to assess your health risk.</p>
+        <div class="input-group">
+            <label for="age">Age (years):</label>
+            <input type="number" id="age" placeholder="e.g., 30" min="1" max="120">
+            
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" placeholder="e.g., 70" min="1" step="0.1">
+            
+            <label for="height">Height (m):</label>
+            <input type="number" id="height" placeholder="e.g., 1.75" min="0.5" step="0.01">
+            
+            <label for="smoking">Do you smoke?</label>
+            <select id="smoking">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+            
+            <label for="activity">Weekly Physical Activity (hours):</label>
+            <input type="number" id="activity" placeholder="e.g., 2" min="0" step="0.5">
+        </div>
+        <button id="calculate-btn">Assess Risk</button>
+        <div id="result"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const calculateBtn = document.getElementById('calculate-btn');
+    const resultDiv = document.getElementById('result');
+
+    calculateBtn.addEventListener('click', () => {
+        // Get input values
+        const age = parseFloat(document.getElementById('age').value);
+        const weight = parseFloat(document.getElementById('weight').value);
+        const height = parseFloat(document.getElementById('height').value);
+        const smoking = document.getElementById('smoking').value;
+        const activity = parseFloat(document.getElementById('activity').value);
+
+        // Input validation
+        if (isNaN(age) || isNaN(weight) || isNaN(height) || isNaN(activity) ||
+            age <= 0 || weight <= 0 || height <= 0 || activity < 0) {
+            resultDiv.textContent = 'Please enter valid positive numbers for all fields.';
+            return;
+        }
+
+        // Calculate BMI
+        const bmi = weight / (height * height);
+
+        // Calculate risk score (simplified formula)
+        let riskScore = 0;
+
+        // BMI contribution (higher BMI = higher risk)
+        if (bmi < 18.5) riskScore += 10; // Underweight risk
+        else if (bmi >= 25 && bmi < 30) riskScore += 20; // Overweight
+        else if (bmi >= 30) riskScore += 40; // Obese
+        else riskScore += 0; // Normal weight
+
+        // Age contribution (older age = higher risk)
+        if (age >= 50) riskScore += 20;
+        else if (age >= 35) riskScore += 10;
+
+        // Smoking contribution
+        if (smoking === 'yes') riskScore += 30;
+
+        // Activity contribution (less activity = higher risk)
+        if (activity < 1) riskScore += 20;
+        else if (activity < 3) riskScore += 10;
+
+        // Determine risk category
+        let category;
+        if (riskScore <= 20) {
+            category = 'Low Risk';
+        } else if (riskScore <= 50) {
+            category = 'Moderate Risk';
+        } else {
+            category = 'High Risk';
+        }
+
+        // Display result
+        resultDiv.innerHTML = `Risk Score: ${riskScore}<br>Category: ${category}`;
+    });
+});
+</script>
+</html>

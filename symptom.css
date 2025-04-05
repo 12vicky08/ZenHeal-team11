@@ -1,0 +1,181 @@
+.symptom-checker-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.checker-widget {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    margin: 0 0.5rem;
+    border-radius: 4px;
+}
+
+.step.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.form-step {
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.symptom-selector {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.symptoms-list {
+    border-left: 1px solid var(--border-color);
+    padding-left: 2rem;
+}
+
+.symptom-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.next-btn,
+.back-btn,
+.start-over-btn {
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.next-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.back-btn {
+    background-color: var(--secondary-color);
+}
+
+.hidden {
+    display: none;
+}
+
+.results-container {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+}
+
+.disclaimer {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 4px;
+    color: #856404;
+}
+    :root {
+        --primary-color: #4CAF50;
+        --secondary-color: #2196F3;
+        --background-color: #f8f9fa;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: var(--background-color);
+    }
+
+    .symptom-checker-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        background: white;
+    }
+
+    .checker-widget {
+        animation: fadeIn 1s ease;
+    }
+
+    .step-indicator {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background: #f5f5f5;
+        border-radius: 10px;
+    }
+
+    .form-group input, 
+    .form-group select {
+        padding: 12px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 2px rgba(76,175,80,0.2);
+    }
+
+    button {
+        padding: 12px 24px;
+        border-radius: 8px;
+        border: none;
+        background: var(--primary-color);
+        color: white;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+
+    button:hover {
+        transform: translateY(-2px);
+    }
+
+    .results-container {
+        padding: 1rem;
+        border: 2px solid #eee;
+        border-radius: 10px;
+    }

@@ -1,0 +1,64 @@
+.wellbeing-hero {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+.wellness-topics2 {
+    background-color: pink; /* Adds pink background */
+    padding: 50px 20px; /* Adds some padding for better spacing */
+    text-align: center;
+}
+
+.topics-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.topic-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.topic-card img {
+    width: 100%; /* Ensure full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures image covers the space without distortion */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+.topic-card h2 {
+    padding: 1rem;
+    color: var(--primary-color);
+}
+
+.topic-card ul {
+    list-style: none;
+    padding: 0 1rem 1rem;
+}
+
+.topic-card li {
+    margin: 0.5rem 0;
+}
+
+.topic-card a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.topic-card a:hover {
+    color: var(--primary-color);
+}

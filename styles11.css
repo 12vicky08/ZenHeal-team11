@@ -1,0 +1,285 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styles */
+.main-header {
+    background-color: #06f672;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo {
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+    white-space: nowrap;
+}
+
+.logo h1 {
+    font-size: 2.0rem;
+    font-style: italic;
+    margin-right: 100px;
+}
+
+.orange {
+    color: #f35c11;
+}
+
+.green {
+    color: #242ffb;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+.nav-menu a {
+    color: #101010;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 1.1rem;
+    }
+
+
+.nav-item {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #fdfdfd;
+    
+}
+
+.nav-right {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.login-btn {
+    padding: 0.5rem 1rem;
+    background-color: #f4f5f4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn a {
+    color: rgb(29, 240, 100);
+    text-decoration: none;
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: #11f327;
+}
+
+.cta-btn {
+    padding: 1rem 2rem;
+    background-color: #11f327;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Story and Health sections */
+.section-title {
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 2rem;
+}
+
+.story-grid, .health-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.story-card, .health-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.story-card:hover, .health-card:hover {
+    transform: translateY(-5px);
+}
+
+.story-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.story-card h3, .health-card h3 {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.story-card p, .health-card p {
+    padding: 0 1rem;
+    color: #666;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    color: #11f327;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Mobile menu button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+/* Dark mode styles */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dark-mode .main-header {
+    background-color: #2d2d2d;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dark-mode .nav-item {
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+}
+
+.dark-mode .story-card,
+.dark-mode .health-card {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dark-mode .footer-content {
+    background-color: #2d2d2d;
+    transition: background-color 0.3s ease-in-out;
+}
+.subscribe-btn { 
+    display: inline-block;
+    background-color: #f1f5f2;
+    
+    
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.subscribe-btn:hover {
+    background-color: #24d81e; 
+    transform: scale(1.05);
+}
+
+.subscribe-btn:active {
+    background-color: #07e73f;
+}

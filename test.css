@@ -1,0 +1,571 @@
+:root {
+    --primary-color: #002280;
+    --secondary-color: #f8f9fa;
+    --text-color: #333;
+    --border-color: #e0e0e0;
+    --max-width: 1200px;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s ease;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background: var(--secondary-color);
+    transition: background var(--transition-speed), color var(--transition-speed);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Enhanced Header and Navigation */
+  .main-header {
+    background-color: #002280;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px var(--shadow-color);
+  }
+  
+  .nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    height: 60px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 30px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-speed);
+    font-size: 14px;
+  }
+  
+  .nav-item:hover {
+    color: #cccccc;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    transition: color var(--transition-speed);
+  }
+  
+  .dropbtn:hover,
+  .dropbtn:focus {
+    color: #cccccc;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0 8px 16px var(--shadow-color);
+    z-index: 1;
+    border-radius: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity var(--transition-speed), transform var(--transition-speed);
+  }
+  
+  .dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    font-size: 14px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: var(--primary-color);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Enhanced Search and Buttons */
+  .nav-right {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  /* Main Content Styling */
+  main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+  
+  .section-title {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Top Stories Section */
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .story-card {
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
+    transition: transform var(--transition-speed);
+    background-color: white;
+  }
+  
+  .story-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .story-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  
+  .story-card h3 {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin: 0;
+  }
+  
+  /* Living Healthy Section */
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+  }
+  
+  .view-all {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-speed);
+    font-size: 14px;
+  }
+  
+  .view-all:hover {
+    text-decoration: underline;
+  }
+  
+  .health-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .health-card {
+    border-radius: 0;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: none;
+    transition: transform var(--transition-speed);
+  }
+  
+  .health-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .health-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  
+  .health-card h3 {
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  /* Mobile menu button */
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1024px) {
+    .health-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .nav-right {
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: var(--primary-color);
+      padding: 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-menu.active {
+      display: flex;
+    }
+  
+    .mobile-menu-btn {
+      display: block;
+    }
+  
+    .health-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .article-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .health-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .featured-article {
+      flex-direction: column;
+    }
+  
+    .featured-article img {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+  
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Header styles */
+  .main-header {
+    background-color: #002280;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 30px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .nav-item {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-item:hover {
+    color: #cccccc;
+  }
+  
+  .nav-right {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .login-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .login-btn a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Top stories section */
+  .top-stories-section {
+    padding-top: 30px;
+  }
+  
+  .top-stories-header {
+    color: #002280;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .featured-article {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  
+  .featured-article img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .featured-article-content h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .featured-article-content p {
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .article-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .article-item img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .article-item h3 {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Living Healthy section */
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+  
+  .section-title {
+    color: #002280;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  
+  .view-all {
+    color: #002280;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .view-all:hover {
+    text-decoration: underline;
+  }
+  
+  /* Mobile menu button */
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #002280;
+      padding: 1rem;
+      flex-direction: column;
+      text-align: left;
+    }
+  
+    .nav-menu.active {
+      display: flex;
+    }
+  
+    .mobile-menu-btn {
+      display: block;
+    }
+  
+    .article-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .featured-article {
+      flex-direction: column;
+    }
+  
+    .featured-article img {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+  
+  /* Dark mode toggle button */
+  .dark-mode-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Subscribe button */
+  .subscribe-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: normal;
+    font-size: 14px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscribe-btn i {
+    margin-right: 5px;
+  }
+  
+  .subscribe-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: none;
+  }
+  
+  .subscribe-btn a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+    
