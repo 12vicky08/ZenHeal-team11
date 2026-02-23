@@ -5,6 +5,11 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background: linear-gradient(135deg, #0a0a2e, #1a1a4e);
+    min-height: 100vh;
+}
+
 #background-video {
     position: fixed;
     right: 0;
@@ -105,6 +110,7 @@
 .switch-form {
     text-align: center;
     margin-top: 20px;
+    color: #ffffff;
 }
 
 .switch-form a {
@@ -116,7 +122,7 @@
 .form-header {
     text-align: center;
     margin-bottom: 30px;
-    color: #d5d5d5;
+    color: #ffffff;
 }
 
 .error-message {
